@@ -38,6 +38,16 @@ const PayCheck = () => {
     }
   };
 
+  let emoji = null;
+
+  if (sum >= 40000) {
+    emoji = "🤩🤑😜";
+  } else if (sum >= 25000) {
+    emoji = "😉";
+  } else if (sum >= 15000) {
+    emoji = "😥";
+  }
+
   return (
     <div className="main-paycheck">
       <div className="calendar">
@@ -45,7 +55,7 @@ const PayCheck = () => {
       </div>
       <div className="resoults">
         <h1>
-          Iznos: <span className="rsd">{sum}</span> rsd.
+          Ukupan iznos: <span className="rsd">{sum}</span> rsd. {emoji}
         </h1>
         <h2>2800 puta pritisnuto: {clicked2800}</h2>
         <h2>2240 puta pritisnuto: {clicked2240}</h2>
@@ -60,6 +70,7 @@ const PayCheck = () => {
         <span className="info">
           <p className="radni-dan">10h radni dan = 2800rsd.</p>
           <p className="subota">8h subota = 2240rsd.</p>
+          <p className="ukupna-satnica">Po satu = 280rsd. ⛏ 😔 </p>
         </span>
       </div>
     </div>
