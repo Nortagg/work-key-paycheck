@@ -1,0 +1,94 @@
+.main-paycheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 5px;
+}
+.calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0);
+}
+.resoults {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(95, 158, 160);
+  box-shadow: 0px 0px 10px black;
+
+  .rsd {
+    color: rgba(0, 255, 106, 0.774);
+  }
+  h1,
+  h2 {
+    font-size: 20px;
+    margin: 5px;
+    color: white;
+  }
+}
+
+.calculator-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid black;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 10px 10px 0 0;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    border-radius: 10px;
+    height: 35px;
+    font-size: 20px;
+    background-color: rgb(39, 167, 39);
+    border: 0px;
+    box-shadow: 0px 0px 0px rgb(0, 250, 75);
+    transition: 0.4s;
+    &:hover {
+      box-shadow: 0px 0px 10px rgb(0, 250, 75);
+    }
+  }
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 0 0 10px 10px;
+
+  .radni-dan {
+    text-align: start;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .subota {
+    text-align: start;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding-left: 10px;
+  }
+}

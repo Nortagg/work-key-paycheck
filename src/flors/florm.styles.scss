@@ -1,0 +1,86 @@
+.apartment-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+}
+.apartment {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 14px;
+}
+.apfont {
+  z-index: 1;
+  margin-top: 1.5rem;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+}
+
+.faunlocked {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(3.5);
+  opacity: 0.5;
+  color: green;
+  transition: 1s;
+}
+.falocked {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(3.5);
+  opacity: 0.5;
+  color: red;
+  transition: 1s;
+}
+
+.fira-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 52rem;
+  bottom: 19rem;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  opacity: 0;
+  transition: 1s;
+  &:hover {
+    transform: rotate(45deg);
+    left: 62rem;
+    opacity: 1;
+  }
+}
+.fira {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+
+  box-shadow: gold 0px 0px 100px, red 0px 0px 40px;
+}
+.voono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 70px;
+  background-color: rgba(220, 220, 220, 0.5);
+  color: black;
+  transform: rotate(0deg);
+  border-radius: 1rem 1rem 0rem 1rem;
+  font-size: 20px;
+}

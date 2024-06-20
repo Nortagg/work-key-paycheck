@@ -1,0 +1,86 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 10px;
+}
+.flor-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+
+  .flor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    width: 80px;
+    height: 60px;
+    border-radius: 0.1rem 1rem 0 0;
+    background-color: rgb(109, 100, 100);
+    border: 2px solid black;
+    box-shadow: 0px 0px 20px black;
+    transform: rotate(5deg);
+    font-size: 20px;
+    transition: 0.5s;
+  }
+  .flor:hover {
+    transform: scale(1.1) rotate(-1deg);
+    border-radius: 0 0 0.1rem 1rem;
+  }
+}
+.pay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(255, 251, 0);
+  box-shadow: 0px 0px 5px black;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: bold;
+  transform: rotate(-2deg);
+  transition: 0.5s;
+  margin-bottom: 5rem;
+}
+.pay::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  transition: 0.4s;
+}
+.pay:hover::after {
+  bottom: 2px;
+  left: 2px;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  input {
+    background-color: transparent;
+    border: none;
+    width: 300px;
+    height: 20px;
+    color: white;
+    box-shadow: inset 0px 0px 1px white;
+  }
+}
+.Links {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: gray;
+    transition: 0.3s;
+  }
+}

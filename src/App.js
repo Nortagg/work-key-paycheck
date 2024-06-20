@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import FlorBox from "./flors/flor.component";
+import { Route, Routes } from "react-router-dom";
+import FlorOne from "./flors/flor.one";
+import "./app.scss";
+import PayCheck from "./paycheck/paycheck.component";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<FlorBox />}></Route>
+        <Route path="/flor-one" element={<FlorOne />}></Route>
+        <Route path="/paycheck" element={<PayCheck />}></Route>
+      </Routes>
     </div>
   );
 }

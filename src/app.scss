@@ -1,0 +1,17 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  background-image: url("../public/pictures/pres.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pres {
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  width: 100%;
+}
