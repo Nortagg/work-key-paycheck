@@ -1,6 +1,8 @@
 import "./paycheck.styles.scss";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { IoMdArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const PayCheck = () => {
@@ -50,10 +52,13 @@ const PayCheck = () => {
 
   return (
     <div className="main-paycheck">
+      <Link className="link-paycheck" to={"/"}>
+        <IoMdArrowBack />
+      </Link>
       <div className="calendar">
         <Calendar />
       </div>
-      <div className="resoults">
+      <div className="results">
         <h1>
           Ukupan iznos: <span className="rsd">{sum}</span> rsd. {emoji}
         </h1>
