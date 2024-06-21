@@ -42,7 +42,7 @@ const PayCheck = () => {
 
   let emoji = null;
 
-  if (sum >= 40000) {
+  if (sum >= 38000) {
     emoji = "🤩🤑😜";
   } else if (sum >= 25000) {
     emoji = "😉";
@@ -61,11 +61,13 @@ const PayCheck = () => {
         </div>
         <div className="results">
           <h1>
-            Ukupan iznos: <span className="rsd">{sum}</span> rsd. {emoji}
+            Ukupan iznos: <span className="rsd">{sum}</span> rsd.
           </h1>
           <h2>2800 puta pritisnuto: {clicked2800}</h2>
-          <h2>2240 puta pritisnuto: {clicked2240}</h2>
+          <h2>2240 puta pritisnuto: {clicked2240}</h2>{" "}
+          <span className="emoji">{emoji}</span>
         </div>
+
         <div className="calculator-info-container">
           <div className="calculator">
             <button onClick={handleAdd2800}>+2800 rsd.</button>

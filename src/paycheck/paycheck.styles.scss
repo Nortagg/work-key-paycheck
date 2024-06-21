@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  letter-spacing: 0.3px;
 }
 .off-back {
   display: flex;
@@ -10,15 +11,12 @@
   align-items: center;
   flex-direction: column;
   gap: 5px;
-  border-radius: 10px 10px 0 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.4);
-  width: 370px;
-  height: 640px;
+  width: 400px;
+  height: 700px;
 }
-.react-calendar {
-  background-color: black;
-}
+
 .link-paycheck {
   display: flex;
   justify-content: center;
@@ -33,14 +31,12 @@
   }
 }
 .calendar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid rgb(1, 102, 128);
 }
 .results {
+  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   width: 350px;
@@ -50,14 +46,27 @@
   border-radius: 5px;
 
   .rsd {
-    color: rgba(0, 255, 106, 0.774);
+    color: rgb(251, 255, 0);
   }
   h1,
   h2 {
     font-size: 18px;
-    margin: 5px;
+    margin: 4px 0;
+    padding-left: 5px;
     color: white;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  }
+  .emoji {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    margin-left: 6.8rem;
+    font-size: 30px;
+    transform: rotate(20deg);
+    filter: drop-shadow(0px 0px 10px red)
+      drop-shadow(0px 0px 30px rgb(255, 0, 179));
   }
 }
 
@@ -87,9 +96,8 @@
     width: 160px;
     border-radius: 15px;
     height: 35px;
-    font-size: 20px;
+    font-size: 22px;
     color: rgb(255, 255, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -97,6 +105,7 @@
     transition: 0.1s;
     &:active {
       border: 1px red solid;
+      color: greenyellow;
     }
   }
 }
@@ -104,22 +113,23 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   color: white;
-  font-size: 18px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0);
+  padding-left: 10px;
   .radni-dan {
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 
   .subota {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
   }
   .ukupna-satnica {
-    margin-top: 5px;
+    margin-top: 3px;
     margin-bottom: 5px;
   }
 }
