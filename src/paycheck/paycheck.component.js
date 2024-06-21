@@ -52,31 +52,33 @@ const PayCheck = () => {
 
   return (
     <div className="main-paycheck">
-      <Link className="link-paycheck" to={"/"}>
-        <IoMdArrowBack />
-      </Link>
-      <div className="calendar">
-        <Calendar />
-      </div>
-      <div className="results">
-        <h1>
-          Ukupan iznos: <span className="rsd">{sum}</span> rsd. {emoji}
-        </h1>
-        <h2>2800 puta pritisnuto: {clicked2800}</h2>
-        <h2>2240 puta pritisnuto: {clicked2240}</h2>
-      </div>
-      <div className="calculator-info-container">
-        <div className="calculator">
-          <button onClick={handleAdd2800}>+2800 rsd.</button>
-          <button onClick={handleAdd2240}>+2240 rsd.</button>
-          <button onClick={handleReset}>↺</button>
-          <button onClick={handleUndo}>↩</button>
+      <div className="off-back">
+        <Link className="link-paycheck" to={"/"}>
+          <IoMdArrowBack />
+        </Link>
+        <div className="calendar">
+          <Calendar />
         </div>
-        <span className="info">
-          <p className="radni-dan">10h radni dan = 2800rsd.</p>
-          <p className="subota">8h subota = 2240rsd.</p>
-          <p className="ukupna-satnica">Po satu = 280rsd. ⛏ 😔 </p>
-        </span>
+        <div className="results">
+          <h1>
+            Ukupan iznos: <span className="rsd">{sum}</span> rsd. {emoji}
+          </h1>
+          <h2>2800 puta pritisnuto: {clicked2800}</h2>
+          <h2>2240 puta pritisnuto: {clicked2240}</h2>
+        </div>
+        <div className="calculator-info-container">
+          <div className="calculator">
+            <button onClick={handleAdd2800}>+2800 rsd.</button>
+            <button onClick={handleAdd2240}>+2240 rsd.</button>
+            <button onClick={handleReset}>↺</button>
+            <button onClick={handleUndo}>↩</button>
+          </div>
+          <span className="info">
+            <p className="radni-dan">10h radni dan = 2800rsd.</p>
+            <p className="subota">8h subota = 2240rsd.</p>
+            <p className="ukupna-satnica">Po satu = 280rsd. ⛏ 😔 </p>
+          </span>
+        </div>
       </div>
     </div>
   );

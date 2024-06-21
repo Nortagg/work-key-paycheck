@@ -2,9 +2,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100vh;
+}
+.off-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 5px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.4);
+  width: 400px;
+  height: 660px;
+}
+.react-calendar {
+  background-color: black;
 }
 .link-paycheck {
   display: flex;
