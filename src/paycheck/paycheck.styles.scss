@@ -1,23 +1,16 @@
 .main-paycheck {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  letter-spacing: 0.3px;
-}
-.off-back {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.4);
-  width: 400px;
-  height: 700px;
+  height: 100vh;
+  letter-spacing: 0.3px;
+  gap: 6px;
 }
 
 .link-paycheck {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +19,8 @@
   font-size: 24px;
   color: white;
   transition: 0.5s;
+  top: 8.5rem;
+  right: 0rem;
   &:hover {
     color: gray;
   }
@@ -34,15 +29,14 @@
   border: 2px solid rgb(1, 102, 128);
 }
 .results {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   width: 350px;
   background-color: #f4d03f;
-  background-image: linear-gradient(0deg, #06465a 0%, #15a88b 100%);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(0deg, #00495f 0%, #91a3a0 100%);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
   border-radius: 5px;
 
   .rsd {
@@ -76,9 +70,9 @@
   align-items: center;
   flex-direction: column;
   background-color: #f4d03f;
-  background-image: linear-gradient(180deg, #06465a 0%, #15a88b 100%);
+  background-image: linear-gradient(180deg, #00495f 0%, #91a3a0 100%);
   border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
 }
 .calculator {
   display: grid;
@@ -94,7 +88,7 @@
     justify-content: center;
     align-items: center;
     width: 160px;
-    border-radius: 15px;
+    border-radius: 10px;
     height: 35px;
     font-size: 22px;
     color: rgb(255, 255, 255);
