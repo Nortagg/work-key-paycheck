@@ -3,12 +3,9 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  //max-height: 100vh;
 }
 .wallpaper {
   position: relative;
   object-fit: cover;
   max-height: 100vh;
-  @media screen and (max-width: 430px) {
-  }
 }

@@ -13,13 +13,18 @@ const PayCheck = () => {
   const [clicked2240, setClicked2240] = useState(0);
   const [isScaled2800, setIsScaled2800] = useState(false);
   const [isScaled2240, setIsScaled2240] = useState(false);
+  const [animateSum, setAnimateSum] = useState(false);
 
   const handleAdd2800 = () => {
     setHistory([...history, { sum, clicked2800, clicked2240 }]);
     setSum((prevSum) => prevSum + 2800);
     setClicked2800((prevClicked2800) => prevClicked2800 + 1);
     setIsScaled2800(true);
-    setTimeout(() => setIsScaled2800(false), 500);
+    setAnimateSum(true);
+    setTimeout(() => {
+      setIsScaled2800(false);
+      setAnimateSum(false);
+    }, 500);
   };
 
   const handleAdd2240 = () => {
@@ -27,7 +32,11 @@ const PayCheck = () => {
     setSum((prevSum) => prevSum + 2240);
     setClicked2240((prevClicked2240) => prevClicked2240 + 1);
     setIsScaled2240(true);
-    setTimeout(() => setIsScaled2240(false), 500);
+    setAnimateSum(true);
+    setTimeout(() => {
+      setIsScaled2240(false);
+      setAnimateSum(false);
+    }, 500);
   };
 
   const handleReset = () => {
@@ -52,9 +61,9 @@ const PayCheck = () => {
   if (sum >= 38000) {
     emoji = "🤩🤑😜";
   } else if (sum >= 25000) {
-    emoji = "😉";
+    emoji = "💫😉💫";
   } else if (sum >= 15000) {
-    emoji = "😥";
+    emoji = "👷😥🤷‍♂️";
   }
 
   return (
@@ -67,7 +76,11 @@ const PayCheck = () => {
       </div>
       <div className="results">
         <h1>
-          Ukupan iznos: <span className="rsd">{sum}</span> rsd.
+          Ukupan iznos:{" "}
+          <span className={`rsd ${animateSum ? "animated-sum" : ""}`}>
+            {sum}
+          </span>{" "}
+          rsd.
         </h1>
         <h2>
           2800 <PiHandTap className={isScaled2800 ? "scaled" : ""} /> ={" "}
