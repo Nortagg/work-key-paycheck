@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./florm.styles.scss";
 import { FaLock, FaUnlock } from "react-icons/fa";
+import { MdSensorDoor } from "react-icons/md";
 
 const FlorOne = () => {
   const myApartments = [
@@ -72,6 +73,9 @@ const FlorOne = () => {
             }`}
             onClick={() => toggleLock(apartment)}
           >
+            <span className="door">
+              <MdSensorDoor />
+            </span>
             <span className="apfont">{apartment}</span>
             {lockedState[apartment] ? (
               <span className="falocked">

@@ -2,6 +2,7 @@ import "./paycheck.styles.scss";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { IoMdArrowBack } from "react-icons/io";
+import { PiHandTap } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -62,8 +63,12 @@ const PayCheck = () => {
         <h1>
           Ukupan iznos: <span className="rsd">{sum}</span> rsd.
         </h1>
-        <h2>2800 puta pritisnuto: {clicked2800}</h2>
-        <h2>2240 puta pritisnuto: {clicked2240}</h2>{" "}
+        <h2>
+          2800 <PiHandTap /> = {clicked2800}x
+        </h2>
+        <h2>
+          2240 <PiHandTap /> = {clicked2240}x
+        </h2>{" "}
         <span className="emoji">{emoji}</span>
       </div>
 

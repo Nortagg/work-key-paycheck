@@ -1,16 +1,18 @@
 .main-paycheck {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
   letter-spacing: 0.3px;
-  gap: 6px;
+  gap: 5px;
+  @media screen and (max-width: 430px) {
+    height: 100vh;
+  }
 }
 
 .link-paycheck {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,8 +21,6 @@
   font-size: 24px;
   color: white;
   transition: 0.5s;
-  top: 8.5rem;
-  right: 0rem;
   &:hover {
     color: gray;
   }
