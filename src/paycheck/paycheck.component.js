@@ -17,7 +17,7 @@ const PayCheck = () => {
 
   const handleAdd2800 = () => {
     setHistory([...history, { sum, clicked2800, clicked2240 }]);
-    setSum((prevSum) => prevSum + 2800);
+    setSum((prevSum) => prevSum + 3000);
     setClicked2800((prevClicked2800) => prevClicked2800 + 1);
     setIsScaled2800(true);
     setAnimateSum(true);
@@ -29,7 +29,7 @@ const PayCheck = () => {
 
   const handleAdd2240 = () => {
     setHistory([...history, { sum, clicked2800, clicked2240 }]);
-    setSum((prevSum) => prevSum + 2240);
+    setSum((prevSum) => prevSum + 2400);
     setClicked2240((prevClicked2240) => prevClicked2240 + 1);
     setIsScaled2240(true);
     setAnimateSum(true);
@@ -83,11 +83,11 @@ const PayCheck = () => {
           rsd.
         </h1>
         <h2>
-          2800 <PiHandTap className={isScaled2800 ? "scaled" : ""} /> ={" "}
+          3000 <PiHandTap className={isScaled2800 ? "scaled" : ""} /> ={" "}
           {clicked2800}x
         </h2>
         <h2>
-          2240 <PiHandTap className={isScaled2240 ? "scaled" : ""} /> ={" "}
+          2400 <PiHandTap className={isScaled2240 ? "scaled" : ""} /> ={" "}
           {clicked2240}x
         </h2>
         <span className="emoji">{emoji}</span>
@@ -95,15 +95,15 @@ const PayCheck = () => {
 
       <div className="calculator-info-container">
         <div className="calculator">
-          <button onClick={handleAdd2800}>+2800 rsd.</button>
-          <button onClick={handleAdd2240}>+2240 rsd.</button>
+          <button onClick={handleAdd2800}>+3000 rsd.</button>
+          <button onClick={handleAdd2240}>+2400 rsd.</button>
           <button onClick={handleReset}>↺</button>
           <button onClick={handleUndo}>↩</button>
         </div>
         <span className="info">
-          <p className="radni-dan">10h radni dan = 2800rsd.</p>
-          <p className="subota">8h subota = 2240rsd.</p>
-          <p className="ukupna-satnica">Po satu = 280rsd. ⛏ 😔 </p>
+          <p className="radni-dan">10h radni dan = 3000rsd.</p>
+          <p className="subota">8h subota = 2400rsd.</p>
+          <p className="ukupna-satnica">Po satu = 300rsd. ⛏ 😔 </p>
         </span>
       </div>
     </div>
